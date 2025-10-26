@@ -8,8 +8,8 @@ import { CheckCircle2 } from "lucide-react";
 
 const XtremeSales = () => {
   const instructors = [
-    { name: "Andrés Bilbao", title: "Co-founder Rappi" },
-    { name: "Santiago Aparicio", title: "Co-founder Ontop" },
+    { name: "Andrés Bilbao", title: "Co-founder Rappi", image: "/assets/Andres Bilbao.webp" },
+    { name: "Santiago Aparicio", title: "Co-founder Ontop", image: "/assets/Santiago Aparicio.webp" },
   ];
 
   const pillars = [
