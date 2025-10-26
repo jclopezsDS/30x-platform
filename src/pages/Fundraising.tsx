@@ -69,7 +69,7 @@ const Fundraising = () => {
         ctaLink="https://form.typeform.com/to/XBJqESrb?utm_campaign=xxxxx&typeform-source=www.30x.org#ref_id=xxxxx"
       />
 
-      <SocialProof title="We've helped dozens of startups raise capital. And trained leaders from +4,000 companies" />
+      <SocialProof title="We've helped dozens of startups raise capital. And trained leaders from +4,000 companies" logoImage="/assets/logos-empresas.webp" />
 
       {/* Para Quién Es */}
       <section className="py-32 bg-background">
@@ -233,7 +233,7 @@ const Fundraising = () => {
         </div>
       </section>
 
-      <SocialProof title="We've helped incubate +20 companies, and invested in different funds, including:" />
+      <SocialProof title="We've helped incubate +20 companies, and invested in different funds, including:" logoImage="/assets/logos-empresas.webp" />
 
       <CTASection 
         headline="Raise capital" 

@@ -12,14 +12,17 @@ const Index = () => {
     {
       name: "Dylan Rosemberg",
       title: "Founder de Growth Rockstar",
+      image: "/assets/Dylan Rosemberg.webp",
     },
     {
       name: "Andrés Bilbao",
       title: "Co-founder de Rappi",
+      image: "/assets/Andres Bilbao.webp",
     },
     {
       name: "Daniel Bilbao",
       title: "Co-founder de Truora",
+      image: "/assets/Daniel Bilbao.webp",
     },
   ];
 
@@ -139,7 +142,7 @@ const Index = () => {
       </section>
 
       {/* Social Proof */}
-      <SocialProof title="Nuestro equipo ha ayudado a fundar más de 25 empresas y a formar más de 4000, que incluyen:" />
+      <SocialProof title="Nuestro equipo ha ayudado a fundar más de 25 empresas y a formar más de 4000, que incluyen:" logoImage="/assets/logos-empresas.webp" />
 
       {/* FAQ Section */}
       <section className="py-32 bg-background">

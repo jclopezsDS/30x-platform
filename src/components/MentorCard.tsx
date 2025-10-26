@@ -4,9 +4,10 @@ interface MentorCardProps {
   name: string;
   title: string;
   index: number;
+  image?: string;
 }
 
-const MentorCard = ({ name, title, index }: MentorCardProps) => {
+const MentorCard = ({ name, title, index, image }: MentorCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -16,13 +17,17 @@ const MentorCard = ({ name, title, index }: MentorCardProps) => {
       whileHover={{ scale: 1.05, y: -8 }}
       className="glass-card p-8 rounded-2xl transition-all duration-300 hover:shadow-2xl group"
     >
-      {/* Photo Placeholder */}
+      {/* Photo */}
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.3 }}
         className="w-32 h-32 rounded-full bg-gradient-to-br from-secondary/30 to-accent/30 mx-auto mb-6 flex items-center justify-center overflow-hidden"
       >
-        <div className="w-full h-full bg-muted/40" />
+        {image ? (
+          <img src={image} alt={name} className="w-full h-full object-cover" />
+        ) : (
+          <div className="w-full h-full bg-muted/40" />
+        )}
       </motion.div>
 
       {/* Info */}
