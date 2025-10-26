@@ -29,7 +29,7 @@ const SocialProof = ({ title, logoCount = 8, logoImage }: SocialProofProps) => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg"
+            className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl bg-white p-8 border border-border/20"
           >
             <img src={logoImage} alt="Logos" className="w-full h-auto" />
           </motion.div>
