@@ -27,6 +27,8 @@ const Navigation = () => {
 
   const getApplyLink = () => {
     switch (location.pathname) {
+      case "/":
+        return "#programs";
       case "/executive":
         return "https://form.typeform.com/to/wZuIIvZt?from=landing&typeform-source=www.30x.org";
       case "/xtreme-sales":
@@ -38,6 +40,10 @@ const Navigation = () => {
       default:
         return "https://form.typeform.com/to/wZuIIvZt?from=landing&typeform-source=www.30x.org";
     }
+  };
+
+  const getApplyText = () => {
+    return location.pathname === "/" ? "EXPLORAR PROGRAMAS" : "APLICAR";
   };
 
   return (
@@ -89,9 +95,15 @@ const Navigation = () => {
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:scale-105 transition-all duration-200 font-bold px-8"
               asChild
             >
-              <a href={getApplyLink()} target="_blank" rel="noopener noreferrer">
-                APLICAR
-              </a>
+              {getApplyLink().startsWith('#') ? (
+                <a href={getApplyLink()}>
+                  {getApplyText()}
+                </a>
+              ) : (
+                <a href={getApplyLink()} target="_blank" rel="noopener noreferrer">
+                  {getApplyText()}
+                </a>
+              )}
             </Button>
           </div>
 
@@ -142,9 +154,15 @@ const Navigation = () => {
                 transition={{ delay: navLinks.length * 0.1 }}
               >
                 <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold py-6" asChild>
-                  <a href={getApplyLink()} target="_blank" rel="noopener noreferrer">
-                    APLICAR
-                  </a>
+                  {getApplyLink().startsWith('#') ? (
+                    <a href={getApplyLink()} onClick={() => setIsMobileMenuOpen(false)}>
+                      {getApplyText()}
+                    </a>
+                  ) : (
+                    <a href={getApplyLink()} target="_blank" rel="noopener noreferrer">
+                      {getApplyText()}
+                    </a>
+                  )}
                 </Button>
               </motion.div>
             </div>
