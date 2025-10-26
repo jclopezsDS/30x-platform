@@ -10,6 +10,7 @@ import ThirtyX from "./pages/ThirtyX";
 import XtremeSales from "./pages/XtremeSales";
 import EverybodyAI from "./pages/EverybodyAI";
 import Fundraising from "./pages/Fundraising";
+import AIFirstVC from "./pages/AIFirstVC";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
               <Route path="/xtreme-sales" element={<XtremeSales />} />
               <Route path="/everybody-ai" element={<EverybodyAI />} />
               <Route path="/fundraising" element={<Fundraising />} />
+              <Route path="/ai-first-vc" element={<AIFirstVC />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

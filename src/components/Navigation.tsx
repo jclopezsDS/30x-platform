@@ -23,6 +23,7 @@ const Navigation = () => {
     { name: "Xtreme Sales", path: "/xtreme-sales" },
     { name: "Everybody AI", path: "/everybody-ai" },
     { name: "Fundraising", path: "/fundraising" },
+    { name: "AI First VC", path: "/ai-first-vc" },
   ];
 
   const getApplyLink = () => {
@@ -37,6 +38,8 @@ const Navigation = () => {
         return "https://form.typeform.com/to/beHsSd8p?utm_campaign=xxxxx&typeform-source=www.30x.org#ref_id=xxxxx";
       case "/fundraising":
         return "https://form.typeform.com/to/XBJqESrb?utm_campaign=xxxxx&typeform-source=www.30x.org#ref_id=xxxxx";
+      case "/ai-first-vc":
+        return "#program";
       default:
         return "https://form.typeform.com/to/wZuIIvZt?from=landing&typeform-source=www.30x.org";
     }

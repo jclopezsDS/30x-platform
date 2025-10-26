@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Hero from "@/components/Hero";
 import CTASection from "@/components/CTASection";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, TrendingUp, DollarSign, Target } from "lucide-react";
+import { ArrowRight, Sparkles, TrendingUp, DollarSign, Target, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -46,6 +46,14 @@ const Home = () => {
       link: "/fundraising",
       color: "text-green-500",
     },
+    {
+      icon: Brain,
+      title: "AI First VC",
+      description: "Elite VC Analyst Operator Program",
+      details: "Async · Output-based · Competitive",
+      link: "/ai-first-vc",
+      color: "text-cyan-500",
+    },
   ];
 
   return (
@@ -79,7 +87,7 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 max-w-7xl mx-auto">
             {programs.map((program, index) => {
               const Icon = program.icon;
               return (
