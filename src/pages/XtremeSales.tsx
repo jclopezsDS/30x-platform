@@ -67,7 +67,7 @@ const XtremeSales = () => {
       <SocialProof title="Nuestros +2200 alumnos ayudan a empresas como estas a crecer. ¡Sé parte!" logoImage="/assets/logos-empresas.webp" />
 
       {/* Instructores */}
-      <section className="py-32 bg-background">
+      <section className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -90,7 +90,7 @@ const XtremeSales = () => {
       </section>
 
       {/* Diferenciadores */}
-      <section className="py-32 bg-muted/30">
+      <section className="py-16 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -142,7 +142,7 @@ const XtremeSales = () => {
       </section>
 
       {/* Cómo Funciona */}
-      <section className="py-32 bg-background">
+      <section className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

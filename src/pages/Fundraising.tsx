@@ -72,7 +72,7 @@ const Fundraising = () => {
       <SocialProof title="We've helped dozens of startups raise capital. And trained leaders from +4,000 companies" logoImage="/assets/logos-empresas.webp" />
 
       {/* Para Quién Es */}
-      <section className="py-32 bg-background">
+      <section className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ const Fundraising = () => {
       </section>
 
       {/* Módulos */}
-      <section className="py-32 bg-muted/30">
+      <section className="py-16 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -137,7 +137,7 @@ const Fundraising = () => {
       </section>
 
       {/* Cómo Funciona */}
-      <section className="py-32 bg-background">
+      <section className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

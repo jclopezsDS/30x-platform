@@ -90,7 +90,7 @@ const Index = () => {
       />
 
       {/* Mentores Section */}
-      <section className="py-32 bg-background">
+      <section className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -116,7 +116,7 @@ const Index = () => {
       </section>
 
       {/* Módulos Section */}
-      <section className="py-32 bg-muted/30">
+      <section className="py-16 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -145,7 +145,7 @@ const Index = () => {
       <SocialProof title="Nuestro equipo ha ayudado a fundar más de 25 empresas y a formar más de 4000, que incluyen:" logoImage="/assets/logos-empresas.webp" />
 
       {/* FAQ Section */}
-      <section className="py-32 bg-background">
+      <section className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

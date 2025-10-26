@@ -70,7 +70,7 @@ const Home = () => {
       />
 
       {/* Programs Section */}
-      <section id="programs" className="py-32 bg-background scroll-mt-20">
+      <section id="programs" className="py-16 md:py-32 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -124,7 +124,7 @@ const Home = () => {
       </section>
 
       {/* Why 30X Section */}
-      <section className="py-32 bg-muted/30">
+      <section className="py-16 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

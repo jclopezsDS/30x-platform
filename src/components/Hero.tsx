@@ -56,7 +56,7 @@ const Hero = ({
         className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-gradient-to-br from-accent/20 to-secondary/20 blur-3xl"
       />
 
-      <div className="relative container mx-auto px-4 z-10">
+      <div className="relative container mx-auto px-4 pb-16 md:pb-20 z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8">
           {/* Metadata */}
           {metadata && (

@@ -127,7 +127,7 @@ const AIFirstVC = () => {
       />
 
       {/* Thank You Box - Applications Closed */}
-      <section className="py-16 bg-background">
+      <section className="py-12 md:py-16 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -160,7 +160,7 @@ const AIFirstVC = () => {
       </section>
 
       {/* Program Overview */}
-      <section id="program" className="py-32 bg-muted/30">
+      <section id="program" className="py-16 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -184,7 +184,7 @@ const AIFirstVC = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-32 bg-background">
+      <section className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -216,7 +216,7 @@ const AIFirstVC = () => {
       </section>
 
       {/* What You'll Build + The Reward */}
-      <section className="py-32 bg-muted/30">
+      <section className="py-16 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
             {/* What You'll Build */}
@@ -268,7 +268,7 @@ const AIFirstVC = () => {
       </section>
 
       {/* Excel in 3 Tracks */}
-      <section className="py-32 bg-background">
+      <section className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -306,7 +306,7 @@ const AIFirstVC = () => {
       </section>
 
       {/* Mission Timeline */}
-      <section className="py-32 bg-muted/30">
+      <section className="py-16 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -353,7 +353,7 @@ const AIFirstVC = () => {
       </section>
 
       {/* Evaluation Criteria */}
-      <section className="py-32 bg-background">
+      <section className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -394,7 +394,7 @@ const AIFirstVC = () => {
       </section>
 
       {/* Program Values */}
-      <section className="py-32 bg-muted/30">
+      <section className="py-16 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -431,7 +431,7 @@ const AIFirstVC = () => {
       </section>
 
       {/* Intel Briefing (FAQ) */}
-      <section className="py-32 bg-background">
+      <section className="py-16 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
