@@ -335,7 +335,7 @@ const AIFirstVC = () => {
                   viewport={{ once: true }}
                   className={`flex items-center gap-6 md:gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                 >
-                  <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                  <div className={`flex-1 text-center ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                     <div className={`glass-card p-6 rounded-xl border-2 ${milestone.highlight ? 'border-accent' : 'border-accent/30'}`}>
                       <div className={`text-sm font-bold mb-2 ${milestone.highlight ? 'text-orange-400' : 'text-accent'}`}>
                         {milestone.date}

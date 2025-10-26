@@ -233,8 +233,6 @@ const Fundraising = () => {
         </div>
       </section>
 
-      <SocialProof title="We've helped incubate +20 companies, and invested in different funds, including:" logoImage="/assets/logos-empresas.webp" />
-
       <CTASection 
         headline="Raise capital" 
         subheadline="with speed and precision"
