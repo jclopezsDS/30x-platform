@@ -18,10 +18,11 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { name: "Programa Ejecutivo", path: "/" },
+    { name: "Inicio", path: "/" },
+    { name: "30X Presencial", path: "/30x" },
     { name: "Xtreme Sales", path: "/xtreme-sales" },
     { name: "Everybody AI", path: "/everybody-ai" },
-    { name: "30X Fundraising", path: "/fundraising" },
+    { name: "Fundraising", path: "/fundraising" },
   ];
 
   return (

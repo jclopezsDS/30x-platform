@@ -5,7 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-import Index from "./pages/Index";
+import Home from "./pages/Home";
+import ThirtyX from "./pages/ThirtyX";
 import XtremeSales from "./pages/XtremeSales";
 import EverybodyAI from "./pages/EverybodyAI";
 import Fundraising from "./pages/Fundraising";
@@ -23,7 +24,8 @@ const App = () => (
           <Navigation />
           <main className="flex-1">
             <Routes>
-              <Route path="/" element={<Index />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/30x" element={<ThirtyX />} />
               <Route path="/xtreme-sales" element={<XtremeSales />} />
               <Route path="/everybody-ai" element={<EverybodyAI />} />
               <Route path="/fundraising" element={<Fundraising />} />
