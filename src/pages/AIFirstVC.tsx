@@ -218,7 +218,7 @@ const AIFirstVC = () => {
       {/* What You'll Build + The Reward */}
       <section className="py-16 md:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto">
             {/* What You'll Build */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -282,7 +282,7 @@ const AIFirstVC = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {tracks.map((track, index) => (
               <motion.div
                 key={index}
@@ -333,7 +333,7 @@ const AIFirstVC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`flex items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                  className={`flex items-center gap-6 md:gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                 >
                   <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                     <div className={`glass-card p-6 rounded-xl border-2 ${milestone.highlight ? 'border-accent' : 'border-accent/30'}`}>
@@ -408,7 +408,7 @@ const AIFirstVC = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (

@@ -107,7 +107,7 @@ const Index = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
             {mentors.map((mentor, index) => (
               <MentorCard key={mentor.name} {...mentor} index={index} />
             ))}
@@ -133,7 +133,7 @@ const Index = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {modules.map((module, index) => (
               <ModuleCard key={module.title} {...module} index={index} />
             ))}

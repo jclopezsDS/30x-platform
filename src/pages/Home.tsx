@@ -87,7 +87,7 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8 max-w-7xl mx-auto">
             {programs.map((program, index) => {
               const Icon = program.icon;
               return (
@@ -139,7 +139,7 @@ const Home = () => {
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mt-4">
               Fundadores y ejecutivos que ya escalaron empresas te comparten sus frameworks, aprendizajes y errores
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-12">
               {[
                 {
                   title: "Aprendizaje práctico",

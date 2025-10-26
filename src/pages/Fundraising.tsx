@@ -149,7 +149,7 @@ const Fundraising = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
               How It Works
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
               {[
                 { title: "8 Live Classes", desc: "2:30 hours each" },
                 { title: "Duration", desc: "3 weeks" },
