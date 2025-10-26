@@ -77,18 +77,55 @@ const EverybodyAI = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-16 space-y-4"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Conoce a tus profesores
             </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Expertos en IA que te guiarán desde los fundamentos hasta la implementación práctica
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-5xl mx-auto"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/20">
+              <img 
+                src="/assets/Everybody AI Asset.webp" 
+                alt="Profesores de EverybodyAI" 
+                className="w-full h-auto"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+            </div>
+          </motion.div>
+
+          {/* Nombres de los profesores debajo */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+          >
             {professors.map((professor, index) => (
-              <MentorCard key={professor.name} {...professor} index={index} />
+              <motion.div
+                key={professor.name}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <h3 className="font-bold text-foreground text-lg mb-1">{professor.name}</h3>
+                <p className="text-sm text-muted-foreground">{professor.title}</p>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
