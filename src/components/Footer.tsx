@@ -1,22 +1,22 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Instagram, Linkedin, Youtube } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const programs = [
-    { name: "Programa Ejecutivo", path: "/" },
+    { name: "Executive", path: "/executive" },
     { name: "Xtreme Sales", path: "/xtreme-sales" },
     { name: "Everybody AI", path: "/everybody-ai" },
-    { name: "30X Fundraising", path: "/fundraising" },
+    { name: "Fundraising", path: "/fundraising" },
+    { name: "AI First VC", path: "/ai-first-vc" },
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Youtube, href: "#", label: "YouTube" },
+    { icon: Instagram, href: "https://www.instagram.com/crece30x?igsh=bGdodGtpbGw4NGts", label: "Instagram" },
+    { icon: Linkedin, href: "http://linkedin.com/company/crece30x/", label: "LinkedIn" },
+    { icon: Youtube, href: "https://www.youtube.com/@FundraisingSchool-SeriesA", label: "YouTube" },
   ];
 
   return (
@@ -73,14 +73,6 @@ const Footer = () => {
           >
             <h4 className="text-lg font-bold text-secondary">Contacto</h4>
             <ul className="space-y-3 text-sm">
-              <li>
-                <a
-                  href="mailto:hola@30x.org"
-                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
-                >
-                  hola@30x.org
-                </a>
-              </li>
               <li className="text-primary-foreground/80">
                 Latinoamérica
               </li>
