@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* 30X Brand Colors */
+    --negro-potencia: 0 0% 0.4%;
+    --verde-x: 66 100% 76%;
+    --crema-movimiento: 0 0% 95%;
+    --beige-crecimiento: 40 25% 86%;
+    --gris-vibracion: 120 2% 26%;
+    --naranja-impacto: 22 100% 72%;
+
+    /* Semantic tokens */
+    --background: var(--crema-movimiento);
+    --foreground: var(--negro-potencia);
+
+    --card: 0 0% 100%;
+    --card-foreground: var(--negro-potencia);
+
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--negro-potencia);
+
+    --primary: var(--negro-potencia);
+    --primary-foreground: var(--crema-movimiento);
+
+    --secondary: var(--verde-x);
+    --secondary-foreground: var(--negro-potencia);
+
+    --muted: var(--beige-crecimiento);
+    --muted-foreground: var(--gris-vibracion);
+
+    --accent: var(--naranja-impacto);
+    --accent-foreground: var(--negro-potencia);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: var(--negro-potencia);
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--verde-x)) 0%, hsl(var(--naranja-impacto)) 100%);
+    --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+  }
+
+  .dark {
+    --background: var(--negro-potencia);
+    --foreground: var(--crema-movimiento);
+
+    --card: var(--gris-vibracion);
+    --card-foreground: var(--crema-movimiento);
+
+    --popover: var(--gris-vibracion);
+    --popover-foreground: var(--crema-movimiento);
+
+    --primary: var(--crema-movimiento);
+    --primary-foreground: var(--negro-potencia);
+
+    --secondary: var(--verde-x);
+    --secondary-foreground: var(--negro-potencia);
+
+    --muted: var(--gris-vibracion);
+    --muted-foreground: var(--beige-crecimiento);
+
+    --accent: var(--naranja-impacto);
+    --accent-foreground: var(--crema-movimiento);
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: var(--gris-vibracion);
+    --input: var(--gris-vibracion);
+    --ring: var(--verde-x);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+
+  @keyframes gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-xl;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
