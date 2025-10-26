@@ -60,10 +60,10 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <Hero
-        headline="30X"
-        subheadline="Donde los líderes se preparan para escalar"
-        description="Programas ejecutivos de alto impacto en Ventas, AI y Fundraising para fundadores y líderes en Latinoamérica."
-        metadata="Aprende de quienes construyen"
+        headline="Donde los líderes se preparan para escalar"
+        subheadline="Entrenamientos intensivos que combinan estrategia, cultura y ejecución"
+        description="Aprende de fundadores reales que ya escalaron empresas. Frameworks aplicados y probados."
+        metadata="+4,000 líderes formados · 25 empresas impactadas"
         variant="gradient"
         ctaText="EXPLORAR PROGRAMAS"
         ctaLink="#programs"
@@ -80,10 +80,10 @@ const Home = () => {
             className="text-center mb-16 space-y-4"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Nuestros Programas
+              Elige tu siguiente desafío de crecimiento
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Elige el programa que mejor se adapte a tus objetivos de crecimiento
+              Programas creados por fundadores que han escalado empresas desde cero
             </p>
           </motion.div>
 
@@ -134,21 +134,24 @@ const Home = () => {
             className="max-w-4xl mx-auto text-center space-y-8"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              ¿Por qué 30X?
+              En 30X enseñan quienes construyen
             </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mt-4">
+              Fundadores y ejecutivos que ya escalaron empresas te comparten sus frameworks, aprendizajes y errores
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               {[
                 {
-                  title: "Mentores de élite",
-                  description: "Aprende de fundadores de Rappi, Truora y Growth Rockstar",
+                  title: "Aprendizaje práctico",
+                  description: "Frameworks reales, usados por fundadores que ya escalaron. Sin teoría vacía.",
                 },
                 {
-                  title: "Contenido ejecutable",
-                  description: "Frameworks y herramientas que puedes aplicar inmediatamente",
+                  title: "Resultados desde el día uno",
+                  description: "Diseñado para implementar, medir y ver impacto inmediato en tu negocio.",
                 },
                 {
-                  title: "Comunidad exclusiva",
-                  description: "Networking con +2200 líderes y fundadores",
+                  title: "Comunidad que impulsa",
+                  description: "Más de 4,000 líderes y mentores compartiendo experiencias, contactos y crecimiento.",
                 },
               ].map((item, index) => (
                 <motion.div
@@ -172,8 +175,8 @@ const Home = () => {
 
       {/* Final CTA */}
       <CTASection
-        headline="Lleva tu negocio al próximo nivel"
-        subheadline="Elige tu programa y comienza hoy"
+        headline="Aplica hoy y escala tu negocio con velocidad y precisión"
+        subheadline="Cupos limitados. Únete a miles de líderes."
         ctaText="EXPLORAR PROGRAMAS"
         ctaLink="#programs"
       />
