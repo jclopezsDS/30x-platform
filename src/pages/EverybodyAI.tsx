@@ -141,7 +141,7 @@ const EverybodyAI = () => {
         </div>
       </section>
 
-      <SocialProof title="Nuestros +2200 alumnos ayudan a empresas como estas a crecer. ¡Sé parte!" />
+      <SocialProof title="Nuestros +2200 alumnos ayudan a empresas como estas a crecer. ¡Sé parte!" logoImage="/assets/logos-empresas.webp" />
 
       {/* Cómo Funciona */}
       <section className="py-32 bg-background">
