@@ -61,6 +61,7 @@ const XtremeSales = () => {
         description="Ya puedes aplicar a la próxima edición del Programa Xtreme Sales"
         metadata="Fecha de inicio: Q1 2026 | Cupos limitados"
         variant="gradient"
+        ctaLink="https://form.typeform.com/to/ceCF7E1a?from=landing&typeform-source=www.30x.org"
       />
 
       <SocialProof title="Nuestros +2200 alumnos ayudan a empresas como estas a crecer. ¡Sé parte!" />

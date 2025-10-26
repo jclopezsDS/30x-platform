@@ -66,6 +66,7 @@ const EverybodyAI = () => {
         description="Ya puedes aplicar al Programa Everybody AI"
         metadata="Fecha de inicio: 25 de Noviembre, 2025 | Cupos limitados"
         variant="gradient"
+        ctaLink="https://form.typeform.com/to/beHsSd8p?utm_campaign=xxxxx&typeform-source=www.30x.org#ref_id=xxxxx"
       />
 
       {/* Profesores */}

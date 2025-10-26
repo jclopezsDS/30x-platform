@@ -83,6 +83,7 @@ const Index = () => {
         description="Aprende las prácticas y estrategias de las empresas que más crecen, de una forma fácil de aplicar."
         metadata="Próxima edición: Noviembre | Duración: 3 días"
         variant="gradient"
+        ctaLink="https://form.typeform.com/to/wZuIIvZt?from=landing&typeform-source=www.30x.org"
       />
 
       {/* Mentores Section */}

@@ -8,6 +8,7 @@ interface HeroProps {
   description?: string;
   metadata?: string;
   ctaText?: string;
+  ctaLink?: string;
   variant?: "default" | "gradient";
 }
 
@@ -17,6 +18,7 @@ const Hero = ({
   description,
   metadata,
   ctaText = "APLICAR AHORA",
+  ctaLink,
   variant = "default",
 }: HeroProps) => {
   return (
@@ -109,14 +111,29 @@ const Hero = ({
             <Button
               size="lg"
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-12 py-7 rounded-full font-bold group shadow-xl hover:shadow-2xl transition-all duration-300"
+              asChild={!!ctaLink}
             >
-              {ctaText}
-              <motion.div
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </motion.div>
+              {ctaLink ? (
+                <a href={ctaLink} target="_blank" rel="noopener noreferrer">
+                  {ctaText}
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </motion.div>
+                </a>
+              ) : (
+                <>
+                  {ctaText}
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </motion.div>
+                </>
+              )}
             </Button>
           </motion.div>
         </div>

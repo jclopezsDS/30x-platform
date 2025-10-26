@@ -66,6 +66,7 @@ const Fundraising = () => {
         description="This program is a toolkit to go out and raise capital. Taught by the Bilbao brothers, two top entrepreneurs in Latam, having raised over $2B across 3 Series A rounds. By founders, for founders."
         metadata="Start date: Tuesday, Nov 25, 2025 | Limited spots"
         variant="gradient"
+        ctaLink="https://form.typeform.com/to/XBJqESrb?utm_campaign=xxxxx&typeform-source=www.30x.org#ref_id=xxxxx"
       />
 
       <SocialProof title="We've helped dozens of startups raise capital. And trained leaders from +4,000 companies" />
