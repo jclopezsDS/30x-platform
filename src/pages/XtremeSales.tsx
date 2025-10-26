@@ -128,7 +128,7 @@ const XtremeSales = () => {
                   value={`pillar-${index}`}
                   className="glass-card px-8 py-2 rounded-xl border-none"
                 >
-                  <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-accent transition-colors">
+                  <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-accent transition-colors text-left">
                     {pillar.title}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground leading-relaxed">

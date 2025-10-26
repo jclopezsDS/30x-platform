@@ -130,7 +130,7 @@ const Navigation = () => {
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-border"
           >
-            <div className="container mx-auto px-4 py-6 space-y-4">
+            <div className="container mx-auto px-6 py-8 space-y-3">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.path}
