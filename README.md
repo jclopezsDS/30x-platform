@@ -1,6 +1,6 @@
-# Elevatix HQ
+# 30x Platform
 
-Platform for business acceleration programs including EverybodyAI, XtremeSales, and Fundraising programs.
+Business acceleration platform featuring EverybodyAI, XtremeSales, and Fundraising programs.
 
 ## Tech Stack
 
@@ -29,7 +29,7 @@ This project is built with:
 git clone <YOUR_GIT_URL>
 
 # Navigate to the project directory
-cd elevatix-hq
+cd 30x-platform
 
 # Install dependencies
 npm install
