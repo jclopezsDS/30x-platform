@@ -6,6 +6,13 @@ import { ArrowRight, Sparkles, TrendingUp, DollarSign, Target } from "lucide-rea
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const scrollToPrograms = () => {
+    const element = document.getElementById('programs');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const programs = [
     {
       icon: Target,
@@ -50,10 +57,12 @@ const Home = () => {
         description="Programas ejecutivos de alto impacto en Ventas, AI y Fundraising para fundadores y líderes en Latinoamérica."
         metadata="Aprende de quienes construyen"
         variant="gradient"
+        ctaText="EXPLORAR PROGRAMAS"
+        ctaLink="#programs"
       />
 
       {/* Programs Section */}
-      <section className="py-32 bg-background">
+      <section id="programs" className="py-32 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -157,6 +166,8 @@ const Home = () => {
       <CTASection
         headline="Lleva tu negocio al próximo nivel"
         subheadline="Elige tu programa y comienza hoy"
+        ctaText="EXPLORAR PROGRAMAS"
+        ctaLink="#programs"
       />
     </div>
   );

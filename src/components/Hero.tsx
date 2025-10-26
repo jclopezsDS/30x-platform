@@ -114,15 +114,27 @@ const Hero = ({
               asChild={!!ctaLink}
             >
               {ctaLink ? (
-                <a href={ctaLink} target="_blank" rel="noopener noreferrer">
-                  {ctaText}
-                  <motion.div
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </motion.div>
-                </a>
+                ctaLink.startsWith('#') ? (
+                  <a href={ctaLink}>
+                    {ctaText}
+                    <motion.div
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </motion.div>
+                  </a>
+                ) : (
+                  <a href={ctaLink} target="_blank" rel="noopener noreferrer">
+                    {ctaText}
+                    <motion.div
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </motion.div>
+                  </a>
+                )
               ) : (
                 <>
                   {ctaText}
