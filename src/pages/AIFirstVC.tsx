@@ -333,9 +333,9 @@ const AIFirstVC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`flex items-center gap-6 md:gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                  className={`flex justify-center md:justify-between items-center gap-6 md:gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                 >
-                  <div className={`flex-1 text-center ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                  <div className={`w-full md:flex-1 text-center ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                     <div className={`glass-card p-6 rounded-xl border-2 ${milestone.highlight ? 'border-accent' : 'border-accent/30'}`}>
                       <div className={`text-sm font-bold mb-2 ${milestone.highlight ? 'text-orange-400' : 'text-accent'}`}>
                         {milestone.date}
@@ -344,7 +344,7 @@ const AIFirstVC = () => {
                     </div>
                   </div>
                   <div className="hidden md:block w-4 h-4 rounded-full bg-accent border-4 border-background relative z-10" />
-                  <div className="flex-1" />
+                  <div className="hidden md:block flex-1" />
                 </motion.div>
               ))}
             </div>
