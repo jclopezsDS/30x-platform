@@ -15,7 +15,7 @@ const ModuleCard = ({ title, description, icon: Icon, index }: ModuleCardProps) 
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      whileHover={{ scale: 1.03, y: -5 }}
+      whileHover={{ scale: 1.05, y: -8 }}
       className="glass-card p-8 rounded-2xl transition-all duration-300 hover:shadow-2xl group h-full"
     >
       {Icon && (

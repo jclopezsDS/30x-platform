@@ -113,7 +113,7 @@ All colors MUST be HSL.
   }
 
   .glass-card {
-    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-xl;
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg hover:shadow-2xl transition-shadow duration-300;
   }
 
   .text-balance {
