@@ -9,10 +9,10 @@ const Home = () => {
   const programs = [
     {
       icon: Target,
-      title: "30X Presencial",
+      title: "Executive",
       description: "Programa Ejecutivo Presencial",
       details: "3 días presenciales | Noviembre 2025",
-      link: "/30x",
+      link: "/executive",
       color: "text-orange-500",
     },
     {

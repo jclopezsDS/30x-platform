@@ -19,7 +19,7 @@ const Navigation = () => {
 
   const navLinks = [
     { name: "Inicio", path: "/" },
-    { name: "30X Presencial", path: "/30x" },
+    { name: "Executive", path: "/executive" },
     { name: "Xtreme Sales", path: "/xtreme-sales" },
     { name: "Everybody AI", path: "/everybody-ai" },
     { name: "Fundraising", path: "/fundraising" },
@@ -27,7 +27,7 @@ const Navigation = () => {
 
   const getApplyLink = () => {
     switch (location.pathname) {
-      case "/30x":
+      case "/executive":
         return "https://form.typeform.com/to/wZuIIvZt?from=landing&typeform-source=www.30x.org";
       case "/xtreme-sales":
         return "https://form.typeform.com/to/ceCF7E1a?from=landing&typeform-source=www.30x.org";

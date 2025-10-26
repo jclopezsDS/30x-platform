@@ -25,7 +25,7 @@ const App = () => (
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/30x" element={<ThirtyX />} />
+              <Route path="/executive" element={<ThirtyX />} />
               <Route path="/xtreme-sales" element={<XtremeSales />} />
               <Route path="/everybody-ai" element={<EverybodyAI />} />
               <Route path="/fundraising" element={<Fundraising />} />
