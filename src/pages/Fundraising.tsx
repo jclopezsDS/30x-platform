@@ -8,67 +8,67 @@ import { CheckCircle2, DollarSign } from "lucide-react";
 const Fundraising = () => {
   const modules = [
     {
-      title: "Cómo entrar a YC (Gratis)",
-      content: "YC Application, qué busca YC, errores típicos",
+      title: "How to Get into YC (Free)",
+      content: "YC Application, what YC looks for, common mistakes",
     },
     {
-      title: "¿Deberías levantar capital?",
-      content: "Modelos de negocio, expectativas reales, calendario",
+      title: "Should You Raise Capital?",
+      content: "Business models, realistic expectations, timeline",
     },
     {
-      title: "El proceso de fundraising",
-      content: "Fund Economics, tipos de fondo, valuación, lista de inversores",
+      title: "The Fundraising Process",
+      content: "Fund Economics, fund types, valuation, investor list",
     },
     {
-      title: "Pitch Deck Ganador",
-      content: "Qué quieren escuchar los VCs, deck de 5-10 slides, elevator pitch",
+      title: "Winning Pitch Deck",
+      content: "What VCs want to hear, 5-10 slide deck, elevator pitch",
     },
     {
-      title: "Cómo usar AI para levantar capital",
-      content: "Herramientas, AI Agents, CRM Investor Funnel",
+      title: "Using AI to Raise Capital",
+      content: "Tools, AI Agents, CRM Investor Funnel",
     },
     {
-      title: "Errores caros y cómo evitarlos",
-      content: "SAFEs, cap table, red flags, simulación Q&A",
+      title: "Costly Mistakes and How to Avoid Them",
+      content: "SAFEs, cap table, red flags, Q&A simulation",
     },
     {
-      title: "Después del pitch",
-      content: "Due diligence, data room, velocity y FOMO, investor updates",
+      title: "After the Pitch",
+      content: "Due diligence, data room, velocity and FOMO, investor updates",
     },
     {
-      title: "Casos de Éxito + Pitch Lab",
-      content: "Pitch + Q&A, mentorías, Demo Day Virtual",
+      title: "Success Stories + Pitch Lab",
+      content: "Pitch + Q&A, mentorships, Virtual Demo Day",
     },
   ];
 
   const benefits = [
-    "8 clases - 16 horas de curso completo en vivo",
-    "El paso a paso de Estrategia de Fundraising",
-    "Toolbox para levantar capital con AI y Playbooks",
-    "Templates descargables ready-to-use",
-    "Casos de éxito reales",
-    "Acceso a Comunidad y Soporte",
-    "Conversaciones con mentores",
+    "8 live classes - 16 hours of complete course",
+    "Step-by-step Fundraising Strategy",
+    "Toolbox to raise capital with AI and Playbooks",
+    "Ready-to-use downloadable templates",
+    "Real success stories",
+    "Access to Community and Support",
+    "Conversations with mentors",
   ];
 
   const targetAudience = [
-    "Salir a levantar capital y no querés salir a improvisar",
-    "Construir una historia que un inversor no pueda ignorar",
-    "Estructurar un pipeline de VCs como si fuera tu sales funnel",
-    "Negociar sin regalar equity",
+    "Go out to raise capital without improvising",
+    "Build a story that investors can't ignore",
+    "Structure a VC pipeline like your sales funnel",
+    "Negotiate without giving away equity",
   ];
 
   return (
     <div className="min-h-screen">
       <Hero
-        headline="Programa 30X Fundraising"
-        subheadline="Ya puedes aplicar al Curso 30X Fundraising"
-        description="Este programa es una caja de herramientas para salir a levantar capital. Dictado por los hermanos Bilbao, dos emprendedores top de Latam, levantando más de 2B en 3 rondas Serie A. Por founders para founders."
-        metadata="Fecha de inicio: Martes, 25 Nov 2025 | Cupos limitados"
+        headline="30X Fundraising Program"
+        subheadline="Now accepting applications for 30X Fundraising"
+        description="This program is a toolkit to go out and raise capital. Taught by the Bilbao brothers, two top entrepreneurs in Latam, having raised over $2B across 3 Series A rounds. By founders, for founders."
+        metadata="Start date: Tuesday, Nov 25, 2025 | Limited spots"
         variant="gradient"
       />
 
-      <SocialProof title="Hemos ayudado a decenas de startups a levantar capital. Y formamos a líderes de +4.000 empresas" />
+      <SocialProof title="We've helped dozens of startups raise capital. And trained leaders from +4,000 companies" />
 
       {/* Para Quién Es */}
       <section className="py-32 bg-background">
@@ -81,7 +81,7 @@ const Fundraising = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center">
-              Este programa es para vos si quieres…
+              This program is for you if you want to…
             </h2>
             <div className="space-y-4">
               {targetAudience.map((item, index) => (
@@ -113,7 +113,7 @@ const Fundraising = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center">
-              Módulos del Programa
+              Program Modules
             </h2>
             <Accordion type="single" collapsible className="space-y-4">
               {modules.map((module, index) => (
@@ -146,14 +146,14 @@ const Fundraising = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-              Cómo Funciona
+              How It Works
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {[
-                { title: "8 Clases en Vivo", desc: "2:30 horas cada una" },
-                { title: "Duración", desc: "3 semanas" },
-                { title: "Ejemplos y Casos Reales", desc: "enfocados en Fundraising" },
-                { title: "Comunidad Exclusiva", desc: "Networking con founders" },
+                { title: "8 Live Classes", desc: "2:30 hours each" },
+                { title: "Duration", desc: "3 weeks" },
+                { title: "Real Examples and Cases", desc: "focused on Fundraising" },
+                { title: "Exclusive Community", desc: "Networking with founders" },
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -179,7 +179,7 @@ const Fundraising = () => {
             className="text-center mb-16"
           >
             <p className="text-2xl font-bold text-accent italic max-w-3xl mx-auto">
-              "Fundraising es un juego de velocidad y proceso, no de esperar milagros."
+              "Fundraising is a game of speed and process, not waiting for miracles."
             </p>
           </motion.div>
 
@@ -192,7 +192,7 @@ const Fundraising = () => {
             className="max-w-3xl mx-auto"
           >
             <h3 className="text-3xl font-bold text-foreground mb-8 text-center">
-              Qué Recibes
+              What You Get
             </h3>
             <div className="space-y-4 mb-12">
               {benefits.map((benefit, index) => (
@@ -219,22 +219,22 @@ const Fundraising = () => {
               className="glass-card p-8 rounded-2xl text-center space-y-4"
             >
               <DollarSign className="w-12 h-12 text-accent mx-auto" />
-              <h3 className="text-2xl font-bold text-foreground">Inversión</h3>
+              <h3 className="text-2xl font-bold text-foreground">Investment</h3>
               <p className="text-4xl font-bold text-accent">USD $1,450</p>
               <p className="text-muted-foreground">
-                Fecha de inicio: 25 de Noviembre
+                Start date: November 25th
               </p>
               <p className="text-sm text-muted-foreground italic">
-                * Ofrecemos becas parciales sujetas a aplicación
+                * We offer partial scholarships subject to application
               </p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      <SocialProof title="Hemos ayudado a incubar +20 compañías, e invertido en diferentes fondos, entre ellas:" />
+      <SocialProof title="We've helped incubate +20 companies, and invested in different funds, including:" />
 
-      <CTASection headline="Levanta capital" subheadline="con velocidad y precisión" />
+      <CTASection headline="Raise capital" subheadline="with speed and precision" />
     </div>
   );
 };
