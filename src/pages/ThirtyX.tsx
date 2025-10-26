@@ -186,6 +186,7 @@ const Index = () => {
       <CTASection
         headline="Lleva tu negocio al próximo nivel"
         subheadline="con velocidad, foco y precisión"
+        ctaLink="https://form.typeform.com/to/wZuIIvZt?from=landing&typeform-source=www.30x.org"
       />
     </div>
   );

@@ -205,7 +205,11 @@ const XtremeSales = () => {
         </div>
       </section>
 
-      <CTASection headline="Domina las ventas" subheadline="y lleva tu negocio al siguiente nivel" />
+      <CTASection 
+        headline="Domina las ventas" 
+        subheadline="y lleva tu negocio al siguiente nivel"
+        ctaLink="https://form.typeform.com/to/ceCF7E1a?from=landing&typeform-source=www.30x.org"
+      />
     </div>
   );
 };

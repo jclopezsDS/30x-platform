@@ -6,9 +6,10 @@ interface CTASectionProps {
   headline: string;
   subheadline?: string;
   ctaText?: string;
+  ctaLink?: string;
 }
 
-const CTASection = ({ headline, subheadline, ctaText = "APLICAR AHORA" }: CTASectionProps) => {
+const CTASection = ({ headline, subheadline, ctaText = "APLICAR AHORA", ctaLink }: CTASectionProps) => {
   return (
     <section className="relative py-32 overflow-hidden">
       {/* Animated background */}
@@ -84,14 +85,29 @@ const CTASection = ({ headline, subheadline, ctaText = "APLICAR AHORA" }: CTASec
             <Button
               size="lg"
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-xl px-16 py-8 rounded-full font-bold shadow-2xl hover:shadow-secondary/50 transition-all duration-300 group"
+              asChild={!!ctaLink}
             >
-              {ctaText}
-              <motion.div
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                <ArrowRight className="ml-3 h-6 w-6" />
-              </motion.div>
+              {ctaLink ? (
+                <a href={ctaLink} target="_blank" rel="noopener noreferrer">
+                  {ctaText}
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <ArrowRight className="ml-3 h-6 w-6" />
+                  </motion.div>
+                </a>
+              ) : (
+                <>
+                  {ctaText}
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <ArrowRight className="ml-3 h-6 w-6" />
+                  </motion.div>
+                </>
+              )}
             </Button>
           </motion.div>
         </div>

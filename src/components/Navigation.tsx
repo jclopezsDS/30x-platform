@@ -25,6 +25,21 @@ const Navigation = () => {
     { name: "Fundraising", path: "/fundraising" },
   ];
 
+  const getApplyLink = () => {
+    switch (location.pathname) {
+      case "/30x":
+        return "https://form.typeform.com/to/wZuIIvZt?from=landing&typeform-source=www.30x.org";
+      case "/xtreme-sales":
+        return "https://form.typeform.com/to/ceCF7E1a?from=landing&typeform-source=www.30x.org";
+      case "/everybody-ai":
+        return "https://form.typeform.com/to/beHsSd8p?utm_campaign=xxxxx&typeform-source=www.30x.org#ref_id=xxxxx";
+      case "/fundraising":
+        return "https://form.typeform.com/to/XBJqESrb?utm_campaign=xxxxx&typeform-source=www.30x.org#ref_id=xxxxx";
+      default:
+        return "https://form.typeform.com/to/wZuIIvZt?from=landing&typeform-source=www.30x.org";
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -72,8 +87,11 @@ const Navigation = () => {
             <Button
               variant="default"
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:scale-105 transition-all duration-200 font-bold px-8"
+              asChild
             >
-              APLICAR
+              <a href={getApplyLink()} target="_blank" rel="noopener noreferrer">
+                APLICAR
+              </a>
             </Button>
           </div>
 
@@ -123,8 +141,10 @@ const Navigation = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navLinks.length * 0.1 }}
               >
-                <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold py-6">
-                  APLICAR
+                <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold py-6" asChild>
+                  <a href={getApplyLink()} target="_blank" rel="noopener noreferrer">
+                    APLICAR
+                  </a>
                 </Button>
               </motion.div>
             </div>

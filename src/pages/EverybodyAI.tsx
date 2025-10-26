@@ -223,7 +223,11 @@ const EverybodyAI = () => {
         </div>
       </section>
 
-      <CTASection headline="Domina la IA" subheadline="y transforma tu forma de trabajar" />
+      <CTASection 
+        headline="Domina la IA" 
+        subheadline="y transforma tu forma de trabajar"
+        ctaLink="https://form.typeform.com/to/beHsSd8p?utm_campaign=xxxxx&typeform-source=www.30x.org#ref_id=xxxxx"
+      />
     </div>
   );
 };

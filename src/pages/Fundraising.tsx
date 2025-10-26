@@ -234,7 +234,11 @@ const Fundraising = () => {
 
       <SocialProof title="We've helped incubate +20 companies, and invested in different funds, including:" />
 
-      <CTASection headline="Raise capital" subheadline="with speed and precision" />
+      <CTASection 
+        headline="Raise capital" 
+        subheadline="with speed and precision"
+        ctaLink="https://form.typeform.com/to/XBJqESrb?utm_campaign=xxxxx&typeform-source=www.30x.org#ref_id=xxxxx"
+      />
     </div>
   );
 };
