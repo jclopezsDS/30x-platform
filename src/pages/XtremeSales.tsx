@@ -206,6 +206,87 @@ const XtremeSales = () => {
         </div>
       </section>
 
+      {/* Preguntas Frecuentes */}
+      <section className="py-16 md:py-32 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">
+              Preguntas Frecuentes
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12 text-center">
+              Todo lo que necesitas saber sobre Xtreme Sales
+            </p>
+            <Accordion type="single" collapsible className="space-y-4">
+              {[
+                {
+                  question: "¿Cómo funciona este programa?",
+                  answer: "El programa dura 3 semanas e incluye sesiones en vivo por Zoom y materiales prácticos. Todas las clases quedan grabadas para que avances a tu ritmo."
+                },
+                {
+                  question: "¿A quién está dirigido el programa?",
+                  answer: "A founders, líderes comerciales y equipos B2B que quieren escalar sus resultados con un enfoque práctico y moderno."
+                },
+                {
+                  question: "¿Se necesita experiencia previa?",
+                  answer: "No. Si ya tienes experiencia, acelerarás tus resultados. Si estás comenzando, aprenderás desde cero cómo construir tu pipeline, hacer discovery, negociar y cerrar deals."
+                },
+                {
+                  question: "¿Cuánto tiempo necesito dedicarle?",
+                  answer: "Con 4 a 6 horas por semana podrás avanzar al ritmo ideal. El programa está diseñado para ejecutarse en paralelo con tu trabajo."
+                },
+                {
+                  question: "¿Es online o presencial?",
+                  answer: "100% online, con sesiones en vivo por Zoom."
+                },
+                {
+                  question: "¿Qué pasa si no puedo asistir a alguna sesión?",
+                  answer: "Todas las sesiones se graban. Sin embargo, recomendamos participar en vivo para aprovechar la interacción, resolver dudas y construir junto al grupo."
+                },
+                {
+                  question: "¿Qué voy a aprender concretamente?",
+                  answer: "Aprenderás a diseñar tu ICP y tus ofertas, ejecutar outbound moderno, discovery efectivo, demos narrativas, pricing y negociación, forecasting y productividad con IA."
+                },
+                {
+                  question: "¿Quiénes son los mentores?",
+                  answer: "El programa es impartido por el equipo de Growth Rockstar y mentores con experiencia comprobada en ventas B2B y crecimiento comercial en LATAM."
+                },
+                {
+                  question: "¿Puedo asistir con mi equipo?",
+                  answer: "Sí. Puedes inscribir a varios miembros de tu equipo. Escríbenos a mila@growthrockstar.com para coordinar la aplicación grupal. Los equipos tienen prioridad en la selección."
+                },
+                {
+                  question: "¿Cómo me inscribo?",
+                  answer: "Haz clic en cualquier botón de esta página y completa tu aplicación. Nuestro equipo revisará tu perfil y te confirmará por correo."
+                },
+                {
+                  question: "¿Recibo un certificado al finalizar?",
+                  answer: "Sí. Los participantes que completen el programa recibirán un certificado oficial de 30X."
+                },
+              ].map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`faq-${index}`}
+                  className="glass-card px-8 py-2 rounded-xl border-none"
+                >
+                  <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-accent transition-colors text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
+      </section>
+
       <CTASection 
         headline="Domina las ventas" 
         subheadline="y lleva tu negocio al siguiente nivel"

@@ -233,6 +233,87 @@ const Fundraising = () => {
         </div>
       </section>
 
+      {/* Frequently Asked Questions */}
+      <section className="py-16 md:py-32 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12 text-center">
+              Everything you need to know about 30X Fundraising
+            </p>
+            <Accordion type="single" collapsible className="space-y-4">
+              {[
+                {
+                  question: "How does this program work?",
+                  answer: "The program runs for 3 intensive weeks with live Zoom sessions and support materials. Content is available in both Spanish and English, with key sessions in English. All sessions are recorded."
+                },
+                {
+                  question: "Who is this program for?",
+                  answer: "For LATAM founders ready to take their startup to the next level and raise capital with a hands-on, real-world approach."
+                },
+                {
+                  question: "Do I need prior experience?",
+                  answer: "No. If you've raised capital before, you'll refine your process. If it's your first time, you'll learn how to build your pitch deck, investor CRM, and deal room from scratch. You just need to have an operating company."
+                },
+                {
+                  question: "How much time do I need to invest?",
+                  answer: "4–6 hours per week is enough to keep the ideal pace. The program is designed to fit alongside your work schedule."
+                },
+                {
+                  question: "Is it online or in person?",
+                  answer: "100% online, with live Zoom sessions."
+                },
+                {
+                  question: "What if I can't attend a live session?",
+                  answer: "All sessions are recorded. Still, we recommend joining live to engage with mentors, ask questions, and make the most of the experience."
+                },
+                {
+                  question: "What will I learn specifically?",
+                  answer: "You'll learn the full fundraising process: identifying investors, leveraging AI to reach them, crafting your pitch, negotiating, and closing rounds successfully."
+                },
+                {
+                  question: "Who are the mentors?",
+                  answer: "Led by Andrés and Daniel Bilbao, founders of Rappi and Truora, along with venture capital and fundraising experts."
+                },
+                {
+                  question: "Can multiple team members join?",
+                  answer: "Yes, although participation is tracked individually. Founders and cofounders can apply together, and we carefully select participants to ensure a high-impact experience."
+                },
+                {
+                  question: "How do I apply?",
+                  answer: "Click any button on this page and complete your application form. Accepted participants are confirmed within 4–10 business days after the application closes."
+                },
+                {
+                  question: "Do I get a certificate upon completion?",
+                  answer: "Yes. Upon completion, you'll receive your official 30X certificate."
+                },
+              ].map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`faq-${index}`}
+                  className="glass-card px-8 py-2 rounded-xl border-none"
+                >
+                  <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-accent transition-colors text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
+      </section>
+
       <CTASection 
         headline="Raise capital" 
         subheadline="with speed and precision"

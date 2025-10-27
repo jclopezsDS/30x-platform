@@ -263,6 +263,87 @@ const EverybodyAI = () => {
         </div>
       </section>
 
+      {/* Preguntas Frecuentes */}
+      <section className="py-16 md:py-32 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">
+              Preguntas Frecuentes
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12 text-center">
+              Todo lo que necesitas saber sobre EverybodyAI
+            </p>
+            <Accordion type="single" collapsible className="space-y-4">
+              {[
+                {
+                  question: "¿Cómo funciona este programa?",
+                  answer: "El programa dura 4 semanas e incluye sesiones en vivo por Zoom, herramientas prácticas y casos reales. Todas las sesiones quedan grabadas para que avances a tu ritmo."
+                },
+                {
+                  question: "¿A quién está dirigido el programa?",
+                  answer: "A founders, líderes y equipos que buscan integrar inteligencia artificial en sus procesos para aumentar productividad, velocidad y resultados."
+                },
+                {
+                  question: "¿Se necesita experiencia previa?",
+                  answer: "No. Si ya usas IA, profundizarás su aplicación. Si estás comenzando, aprenderás desde lo esencial hasta cómo implementarla estratégicamente en tu negocio."
+                },
+                {
+                  question: "¿Cuánto tiempo necesito dedicarle?",
+                  answer: "Con 4 a 6 horas por semana podrás avanzar cómodamente. Está diseñado para que puedas hacerlo en paralelo con tu trabajo."
+                },
+                {
+                  question: "¿Es online o presencial?",
+                  answer: "100% online, con sesiones en vivo por Zoom."
+                },
+                {
+                  question: "¿Qué pasa si no puedo asistir a alguna sesión?",
+                  answer: "Podrás acceder a las grabaciones. Sin embargo, te recomendamos participar en vivo para resolver dudas y aprovechar la interacción directa con mentores y pares."
+                },
+                {
+                  question: "¿Qué voy a aprender concretamente?",
+                  answer: "Aprenderás a usar IA para optimizar procesos, ventas, comunicación y productividad. Conocerás herramientas clave y casos reales aplicables a cualquier industria."
+                },
+                {
+                  question: "¿Quiénes son los mentores?",
+                  answer: "El programa es guiado por el equipo de Growth Rockstar junto con expertos invitados en IA aplicada a negocios."
+                },
+                {
+                  question: "¿Puedo asistir con mi equipo?",
+                  answer: "Sí. Puedes inscribir a varios miembros de tu empresa. Escríbenos a mila@growthrockstar.com para coordinar la aplicación. Los cupos son limitados."
+                },
+                {
+                  question: "¿Cómo me inscribo?",
+                  answer: "Haz clic en cualquier botón de esta página y completa el formulario de aplicación. Te confirmaremos la disponibilidad por correo."
+                },
+                {
+                  question: "¿Recibo un certificado al finalizar?",
+                  answer: "Sí. Al completar el programa recibirás un certificado oficial de 30X."
+                },
+              ].map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`faq-${index}`}
+                  className="glass-card px-8 py-2 rounded-xl border-none"
+                >
+                  <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-accent transition-colors text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
+      </section>
+
       <CTASection 
         headline="Domina la IA" 
         subheadline="y transforma tu forma de trabajar"
