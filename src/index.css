@@ -122,6 +122,7 @@ All colors MUST be HSL.
 
   /* Gradient shimmer effect for titles */
   .gradient-shimmer {
+    display: inline-block;
     background: linear-gradient(
       90deg,
       hsl(var(--foreground)) 0%,
@@ -133,6 +134,7 @@ All colors MUST be HSL.
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shimmer 3s linear infinite;
+    padding-bottom: 0.25rem;
   }
 
   @keyframes shimmer {

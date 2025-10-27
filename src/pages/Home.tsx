@@ -80,7 +80,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-20 md:mb-32 space-y-4"
           >
-            <h2 className="text-4xl md:text-5xl font-bold gradient-shimmer">
+            <h2 className="text-4xl md:text-5xl font-bold gradient-shimmer leading-tight py-2">
               Elige tu siguiente desafío de crecimiento
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
