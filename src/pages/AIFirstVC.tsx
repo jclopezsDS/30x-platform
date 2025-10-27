@@ -11,7 +11,7 @@ const AIFirstVC = () => {
     { step: "→ Tools Provided:", desc: "Access to API keys for process automations and our tools" },
     { step: "→ Learning Resources:", desc: "Courses available if you're not technically savvy" },
     { step: "→ Weekend Shipping:", desc: "Ship over the weekend, keep your 9-5 during the week" },
-    { step: "→ Early submissions & MVPs are incentivized", desc: "—ship before ready!", highlight: true },
+    { step: "→ Early Submissions:", desc: "MVPs are incentivized—ship before ready!", highlight: true },
   ];
 
   const whatYoullBuild = [

@@ -54,29 +54,6 @@ const Index = () => {
     },
   ];
 
-  const faqs = [
-    {
-      question: "¿Cómo funciona este programa?",
-      answer:
-        "Durante los 3 días presenciales de 30X, aprenderás sobre Estrategia, Gestión y Cultura, Ecosistema de Ventas y Modelos de Growth. Acceso a +70 conceptos, diagnóstico de madurez, 6 rondas de mentorías, networking de alto nivel, comunidad 30X.",
-    },
-    {
-      question: "¿Para quién está dirigido?",
-      answer:
-        "Dueños de empresas, gerentes y líderes en posiciones estratégicas, CEOs y ejecutivos C-level que buscan potenciar resultados y acelerar el crecimiento.",
-    },
-    {
-      question: "¿Quiénes son los mentores?",
-      answer:
-        "Dylan Rosemberg (Growth Rockstar), Andrés Bilbao (Rappi), Daniel Bilbao (Truora) + mentores invitados.",
-    },
-    {
-      question: "¿Cómo me inscribo?",
-      answer:
-        "Haz clic en cualquier botón de esta página. Serás redirigido a un formulario de aplicación.",
-    },
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -143,48 +120,6 @@ const Index = () => {
 
       {/* Social Proof */}
       <SocialProof title="Nuestro equipo ha ayudado a fundar más de 25 empresas y a formar más de 4000, que incluyen:" logoImage="/assets/logos-empresas.webp" />
-
-      {/* FAQ Section */}
-      <section className="py-16 md:py-32 bg-background">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Preguntas Frecuentes
-            </h2>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
-          >
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="glass-card px-8 py-2 rounded-xl border-none"
-                >
-                  <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-accent transition-colors text-left">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Preguntas Frecuentes */}
       <section className="py-16 md:py-32 bg-background">
