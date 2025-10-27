@@ -24,7 +24,12 @@ const MentorCard = ({ name, title, index, image }: MentorCardProps) => {
         className="w-32 h-32 rounded-full bg-gradient-to-br from-secondary/30 to-accent/30 mx-auto mb-6 flex items-center justify-center overflow-hidden"
       >
         {image ? (
-          <img src={image} alt={name} className="w-full h-full object-cover" />
+          <img 
+            src={image} 
+            alt={`${name} - ${title}`}
+            loading="lazy"
+            className="w-full h-full object-cover" 
+          />
         ) : (
           <div className="w-full h-full bg-muted/40" />
         )}

@@ -31,7 +31,12 @@ const SocialProof = ({ title, logoCount = 8, logoImage }: SocialProofProps) => {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl bg-white p-8 border border-border/20"
           >
-            <img src={logoImage} alt="Logos" className="w-full h-auto" />
+            <img 
+              src={logoImage} 
+              alt="Logos de empresas donde trabajan nuestros alumnos - Incluye empresas líderes en tecnología y startups de Latinoamérica"
+              loading="lazy"
+              className="w-full h-auto" 
+            />
           </motion.div>
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">

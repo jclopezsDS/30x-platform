@@ -97,7 +97,8 @@ const EverybodyAI = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/20">
               <img 
                 src="/assets/Everybody AI Asset.webp" 
-                alt="Profesores de EverybodyAI" 
+                alt="Equipo de profesores de EverybodyAI - Tatiana de Leon, Gonzalo Vasquez, Luis y Hussam, expertos en inteligencia artificial y machine learning"
+                loading="lazy"
                 className="w-full h-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
