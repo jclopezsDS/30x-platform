@@ -1,11 +1,17 @@
 import { motion } from "framer-motion";
 import Hero from "@/components/Hero";
 import CTASection from "@/components/CTASection";
+import MagneticCard from "@/components/MagneticCard";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, TrendingUp, DollarSign, Target, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCountUp } from "@/hooks/useCountUp";
 
 const Home = () => {
+  // Number counters for stats
+  const leadersCount = useCountUp(4000, 2000);
+  const companiesCount = useCountUp(25, 1500);
+
   const scrollToPrograms = () => {
     const element = document.getElementById('programs');
     if (element) {
@@ -63,7 +69,11 @@ const Home = () => {
         headline="Donde los líderes se preparan para escalar"
         subheadline="Entrenamientos intensivos que combinan estrategia, cultura y ejecución"
         description="Aprende de fundadores reales que ya escalaron empresas. Frameworks aplicados y probados."
-        metadata="+4,000 líderes formados · 25 empresas impactadas"
+        metadata={
+          <>
+            <span ref={leadersCount.ref}>+{leadersCount.count.toLocaleString()}</span> líderes formados · <span ref={companiesCount.ref}>{companiesCount.count}</span> empresas impactadas
+          </>
+        }
         variant="gradient"
         ctaText="EXPLORAR PROGRAMAS"
         ctaLink="#programs"
@@ -79,7 +89,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16 space-y-4"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold gradient-shimmer">
               Elige tu siguiente desafío de crecimiento
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -99,22 +109,24 @@ const Home = () => {
                   viewport={{ once: true }}
                 >
                   <Link to={program.link}>
-                    <div className="glass-card p-8 rounded-2xl h-full hover:scale-105 transition-transform duration-300 cursor-pointer group">
-                      <Icon className={`w-12 h-12 ${program.color} mb-6`} />
-                      <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                        {program.title}
-                      </h3>
-                      <p className="text-lg text-muted-foreground mb-4">
-                        {program.description}
-                      </p>
-                      <p className="text-sm text-muted-foreground mb-6">
-                        {program.details}
-                      </p>
-                      <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
-                        Ver programa
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Button>
-                    </div>
+                    <MagneticCard className="h-full">
+                      <div className="glass-card p-8 rounded-2xl h-full cursor-pointer group">
+                        <Icon className={`w-12 h-12 ${program.color} mb-6`} />
+                        <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
+                          {program.title}
+                        </h3>
+                        <p className="text-lg text-muted-foreground mb-4">
+                          {program.description}
+                        </p>
+                        <p className="text-sm text-muted-foreground mb-6">
+                          {program.details}
+                        </p>
+                        <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+                          Ver programa
+                          <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                      </div>
+                    </MagneticCard>
                   </Link>
                 </motion.div>
               );
@@ -133,7 +145,7 @@ const Home = () => {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto text-center space-y-8"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold gradient-shimmer">
               En 30X enseñan quienes construyen
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mt-4">

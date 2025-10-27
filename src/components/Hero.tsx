@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { m } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -7,7 +8,7 @@ interface HeroProps {
   headline: string;
   subheadline: string;
   description?: string;
-  metadata?: string;
+  metadata?: string | ReactNode;
   ctaText?: string;
   ctaLink?: string;
   variant?: "default" | "gradient";
