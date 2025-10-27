@@ -15,30 +15,19 @@ export default defineConfig({
     },
   },
   build: {
-    // Enable minification
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true, // Remove console.logs in production
-        drop_debugger: true,
-      },
-    },
+    // Use esbuild for faster builds (default)
+    minify: 'esbuild',
     // Code splitting optimization
     rollupOptions: {
       output: {
         manualChunks: {
-          // Vendor chunks
+          // Vendor chunks for better caching
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-toast'],
           'framer': ['framer-motion'],
         },
       },
     },
     // Chunk size warnings
     chunkSizeWarningLimit: 1000,
-  },
-  // Performance optimizations
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion'],
   },
 });
