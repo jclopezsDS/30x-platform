@@ -71,14 +71,14 @@ const Home = () => {
       />
 
       {/* Programs Section */}
-      <section id="programs" className="pt-16 pb-16 md:pt-24 md:pb-32 bg-background scroll-mt-20">
+      <section id="programs" className="pt-8 pb-16 md:pt-12 md:pb-32 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16 md:mb-24 space-y-4"
+            className="text-center mb-20 md:mb-32 space-y-4"
           >
             <h2 className="text-4xl md:text-5xl font-bold gradient-shimmer">
               Elige tu siguiente desafío de crecimiento
