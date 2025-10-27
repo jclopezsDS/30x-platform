@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -31,7 +31,7 @@ const Hero = ({
       )}
       
       {/* Animated circles */}
-      <motion.div
+      <m.div
         animate={{
           scale: [1, 1.2, 1],
           rotate: [0, 180, 360],
@@ -43,7 +43,7 @@ const Hero = ({
         }}
         className="absolute top-20 right-10 w-72 h-72 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 blur-3xl"
       />
-      <motion.div
+      <m.div
         animate={{
           scale: [1, 1.3, 1],
           rotate: [360, 180, 0],
@@ -60,50 +60,50 @@ const Hero = ({
         <div className="max-w-5xl mx-auto text-center space-y-8">
           {/* Metadata */}
           {metadata && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/20 backdrop-blur-sm border border-secondary/30"
             >
               <span className="text-sm font-medium text-foreground">{metadata}</span>
-            </motion.div>
+            </m.div>
           )}
 
           {/* Headline */}
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-foreground text-balance"
           >
             {headline}
-          </motion.h1>
+          </m.h1>
 
           {/* Subheadline */}
-          <motion.h2
+          <m.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-2xl md:text-3xl lg:text-4xl font-semibold text-muted-foreground text-balance"
           >
             {subheadline}
-          </motion.h2>
+          </m.h2>
 
           {/* Description */}
           {description && (
-            <motion.p
+            <m.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-balance leading-relaxed"
             >
               {description}
-            </motion.p>
+            </m.p>
           )}
 
           {/* CTA Button */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -117,37 +117,37 @@ const Hero = ({
                 ctaLink.startsWith('#') ? (
                   <a href={ctaLink}>
                     {ctaText}
-                    <motion.div
+                    <m.div
                       animate={{ x: [0, 5, 0] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
                     >
                       <ArrowRight className="ml-2 h-5 w-5" />
-                    </motion.div>
+                    </m.div>
                   </a>
                 ) : (
                   <a href={ctaLink} target="_blank" rel="noopener noreferrer">
                     {ctaText}
-                    <motion.div
+                    <m.div
                       animate={{ x: [0, 5, 0] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
                     >
                       <ArrowRight className="ml-2 h-5 w-5" />
-                    </motion.div>
+                    </m.div>
                   </a>
                 )
               ) : (
                 <>
                   {ctaText}
-                  <motion.div
+                  <m.div
                     animate={{ x: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                   >
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </motion.div>
+                  </m.div>
                 </>
               )}
             </Button>
-          </motion.div>
+          </m.div>
         </div>
       </div>
 

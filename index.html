@@ -8,6 +8,13 @@
     <meta name="description" content="Donde los líderes se preparan para escalar. Programas ejecutivos de alto impacto en Ventas, AI y Fundraising para fundadores y líderes en Latinoamérica." />
     <meta name="author" content="30X" />
     <link rel="canonical" href="https://www.30x.org/" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="/src/index.css" as="style" />
 
     <meta property="og:title" content="30X - Programas Ejecutivos para Líderes" />
     <meta property="og:description" content="Aprende de quienes construyen. Programas ejecutivos en Ventas, AI y Fundraising con mentores de Rappi, Truora y Growth Rockstar." />
@@ -22,6 +29,6 @@
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" defer></script>
   </body>
 </html>
