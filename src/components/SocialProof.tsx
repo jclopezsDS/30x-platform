@@ -35,6 +35,7 @@ const SocialProof = ({ title, logoCount = 8, logoImage }: SocialProofProps) => {
               src={logoImage} 
               alt="Logos de empresas donde trabajan nuestros alumnos - Incluye empresas líderes en tecnología y startups de Latinoamérica"
               loading="lazy"
+              decoding="async"
               className="w-full h-auto" 
             />
           </motion.div>

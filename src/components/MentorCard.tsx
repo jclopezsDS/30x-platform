@@ -28,6 +28,7 @@ const MentorCard = ({ name, title, index, image }: MentorCardProps) => {
             src={image} 
             alt={`${name} - ${title}`}
             loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover" 
           />
         ) : (

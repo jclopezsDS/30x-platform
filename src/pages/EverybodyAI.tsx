@@ -99,6 +99,7 @@ const EverybodyAI = () => {
                 src="/assets/Everybody AI Asset.webp" 
                 alt="Equipo de profesores de EverybodyAI - Tatiana de Leon, Gonzalo Vasquez, Luis y Hussam, expertos en inteligencia artificial y machine learning"
                 loading="lazy"
+                decoding="async"
                 className="w-full h-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
