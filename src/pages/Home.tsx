@@ -5,13 +5,8 @@ import MagneticCard from "@/components/MagneticCard";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, TrendingUp, DollarSign, Target, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useCountUp } from "@/hooks/useCountUp";
 
 const Home = () => {
-  // Number counters for stats
-  const leadersCount = useCountUp(4000, 2000);
-  const companiesCount = useCountUp(25, 1500);
-
   const scrollToPrograms = () => {
     const element = document.getElementById('programs');
     if (element) {
@@ -69,11 +64,7 @@ const Home = () => {
         headline="Donde los líderes se preparan para escalar"
         subheadline="Entrenamientos intensivos que combinan estrategia, cultura y ejecución"
         description="Aprende de fundadores reales que ya escalaron empresas. Frameworks aplicados y probados."
-        metadata={
-          <>
-            <span ref={leadersCount.ref}>+{leadersCount.count.toLocaleString()}</span> líderes formados · <span ref={companiesCount.ref}>{companiesCount.count}</span> empresas impactadas
-          </>
-        }
+        metadata="+4,000 líderes formados · 25 empresas impactadas"
         variant="gradient"
         ctaText="EXPLORAR PROGRAMAS"
         ctaLink="#programs"

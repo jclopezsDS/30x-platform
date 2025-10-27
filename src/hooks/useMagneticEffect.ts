@@ -1,12 +1,12 @@
 import { useRef, useEffect } from 'react';
-import { isMobile } from '@/lib/utils';
 
 export const useMagneticEffect = (strength: number = 0.3) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Disable on mobile for performance
-    if (isMobile()) return;
+    // Check if we're in browser and not mobile
+    if (typeof window === 'undefined') return;
+    if (window.innerWidth < 768) return;
 
     const element = ref.current;
     if (!element) return;
