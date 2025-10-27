@@ -1,6 +1,7 @@
 import { m } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { isMobile } from "@/lib/utils";
 
 interface HeroProps {
   headline: string;
@@ -21,6 +22,9 @@ const Hero = ({
   ctaLink,
   variant = "default",
 }: HeroProps) => {
+  const mobile = isMobile();
+  const animDuration = mobile ? 0.4 : 0.6;
+  
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
       {/* Animated Background */}
@@ -30,31 +34,35 @@ const Hero = ({
         <div className="absolute inset-0 bg-gradient-to-b from-muted/30 to-background" />
       )}
       
-      {/* Animated circles */}
-      <m.div
-        animate={{
-          scale: [1, 1.2, 1],
-          rotate: [0, 180, 360],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="absolute top-20 right-10 w-72 h-72 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 blur-3xl"
-      />
-      <m.div
-        animate={{
-          scale: [1, 1.3, 1],
-          rotate: [360, 180, 0],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-gradient-to-br from-accent/20 to-secondary/20 blur-3xl"
-      />
+      {/* Animated circles - Disabled on mobile for performance */}
+      {!mobile && (
+        <>
+          <m.div
+            animate={{
+              scale: [1, 1.2, 1],
+              rotate: [0, 180, 360],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute top-20 right-10 w-72 h-72 rounded-full bg-gradient-to-br from-secondary/20 to-accent/20 blur-3xl"
+          />
+          <m.div
+            animate={{
+              scale: [1, 1.3, 1],
+              rotate: [360, 180, 0],
+            }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-gradient-to-br from-accent/20 to-secondary/20 blur-3xl"
+          />
+        </>
+      )}
 
       <div className="relative container mx-auto px-4 pb-16 md:pb-20 z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8">
@@ -63,7 +71,7 @@ const Hero = ({
             <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: animDuration }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/20 backdrop-blur-sm border border-secondary/30"
             >
               <span className="text-sm font-medium text-foreground">{metadata}</span>
@@ -72,9 +80,9 @@ const Hero = ({
 
           {/* Headline */}
           <m.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: mobile ? 15 : 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            transition={{ duration: animDuration, delay: mobile ? 0 : 0.1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-foreground text-balance"
           >
             {headline}
@@ -82,9 +90,9 @@ const Hero = ({
 
           {/* Subheadline */}
           <m.h2
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: mobile ? 15 : 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: animDuration, delay: mobile ? 0 : 0.2 }}
             className="text-2xl md:text-3xl lg:text-4xl font-semibold text-muted-foreground text-balance"
           >
             {subheadline}
@@ -93,9 +101,9 @@ const Hero = ({
           {/* Description */}
           {description && (
             <m.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: mobile ? 15 : 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              transition={{ duration: animDuration, delay: mobile ? 0 : 0.3 }}
               className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-balance leading-relaxed"
             >
               {description}
@@ -106,7 +114,7 @@ const Hero = ({
           <m.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: animDuration, delay: mobile ? 0 : 0.4 }}
           >
             <Button
               size="lg"
