@@ -39,7 +39,7 @@ const Navigation = () => {
       case "/fundraising":
         return "https://form.typeform.com/to/XBJqESrb?utm_campaign=xxxxx&typeform-source=www.30x.org#ref_id=xxxxx";
       case "/ai-first-vc":
-        return "#program";
+        return "#applications-closed";
       default:
         return "https://form.typeform.com/to/wZuIIvZt?from=landing&typeform-source=www.30x.org";
     }

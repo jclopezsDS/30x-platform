@@ -127,7 +127,7 @@ const AIFirstVC = () => {
       />
 
       {/* Thank You Box - Applications Closed */}
-      <section className="py-12 md:py-16 bg-background">
+      <section id="applications-closed" className="py-12 md:py-16 bg-background scroll-mt-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -471,7 +471,7 @@ const AIFirstVC = () => {
         headline="Ready to build the future of VC?" 
         subheadline="Applications for the next cohort opening soon"
         ctaText="Stay Updated"
-        ctaLink="https://form.typeform.com/to/wZuIIvZt?from=landing&typeform-source=www.30x.org"
+        ctaLink="/"
       />
     </div>
   );
