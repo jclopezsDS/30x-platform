@@ -134,7 +134,7 @@ All colors MUST be HSL.
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: shimmer 3s linear infinite;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.5rem;
   }
 
   @keyframes shimmer {
